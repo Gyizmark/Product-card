@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+    *, *::before, *::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: "Montserrat", Fraunces;
+        font-size: 14px;
+        
+    }
+    main{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background: hsl(30, 38%, 92%) ;
+    }
+    .container{
+        max-width: 600px;
+        background: hsl(0, 0%, 100%);
+        height: auto;
+        width: 90%;
+        max-height:390px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 12px;
+        
+    }
+    .card-image-section {
+        background-image: url("./images/image-product-desktop.jpg");
+        width: 950px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+    }
+    .product-card {
+        padding: 2rem;
+        
+    }
+    .product-card > p{
+        padding-bottom: 1.2em;
+        letter-spacing: 0.5em;
+        color: hsl(212, 21%, 14%);
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .product-info > h1{
+        margin-bottom: 0.5em;
+        font-size: clamp(1.5em, 4.3vw, 2.2rem);
+        line-height: 0.9;
+        color: hsl(212, 21%, 14%);
+        font-weight: 700;
+    }
+    .product-info > p{
+     font-weight: 700;
+     color: hsl(228, 12%, 48%);
+     padding-bottom: 1.2em;
+    }
+    .price {
+        font-size: 2rem;
+        color: hsl(158, 36%, 37%);
+        font-weight: 700;
+        padding-bottom: 0.5rem;
+        position: relative;
+        font-family: Fraunces;
+    }
+    .price > .sup-price{
+        font-weight: 500;
+        color: hsl(228, 12%, 48%);
+        font-size: 14px;
+        text-decoration: line-through;
+        margin-left: 0.45rem;
+        position: absolute;
+        top: 10px;
+        font-weight: 500;
+        
+    }
+    #card-prices {
+        
+        padding: 1em 1.9em;
+        width: 100%;
+        text-align: center;
+        background:  hsl(158, 36%, 37%);
+        font-weight: 700;
+        color: hsl(0, 0%, 100%);
+        border: none;
+        cursor: pointer;
+        margin: 12px 0px 0px 0px;
+        border-radius: 12px;
+    }
+    @media screen and (max-width: 560px){
+        .container{
+            flex-direction: column;
+            max-height: 700px;
+            border-radius: 12px;
+        }
+        
+        .card-image-section {
+            background-image: url("./images/image-product-mobile.jpg");
+            width: 100%;
+            height: 700px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat
+        }
+    }
